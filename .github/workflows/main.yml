@@ -1,0 +1,40 @@
+name: Build Souq Alwisat APK
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'zulu'
+          java-version: '17'
+
+      - name: Setup Flutter
+        uses: subosito/flutter-action@v2
+        with:
+          flutter-version: '3.22.0'
+          channel: 'stable'
+
+      - name: Flutter Pub Get
+        run: flutter pub get
+
+      - name: Flutter Create (ensure android folder)
+        run: flutter create . --platforms=android --project-name souq_alwisat
+
+      - name: Build APK Release
+        run: flutter build apk --release
+
+      - name: Upload APK
+        uses: actions/upload-artifact@v4
+        with:
+          name: souq-alwisat-apk
+          path: build/app/outputs/flutter-apk/app-release.apk
