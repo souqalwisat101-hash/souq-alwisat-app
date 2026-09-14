@@ -1,0 +1,41 @@
+{
+  "packageId": "com.souqalwisat.pwa",
+  "host": "souqalwisat.com",
+  "name": "سوق الوساط",
+  "launcherName": "سوق الوساط",
+  "display": "standalone",
+  "themeColor": "#2E7D32",
+  "themeColorDark": "#1565C0",
+  "navigationColor": "#000000",
+  "navigationColorDark": "#000000",
+  "navigationDividerColor": "#00000000",
+  "navigationDividerColorDark": "#00000000",
+  "backgroundColor": "#FFFFFF",
+  "enableNotifications": true,
+  "startUrl": "/app/",
+  "iconUrl": "https://souqalwisat.com/app/logo-512.png",
+  "maskableIconUrl": "https://souqalwisat.com/app/logo-512-maskable.png",
+  "splashScreenFadeOutDuration": 300,
+  "signingKey": {
+    "path": "./android.keystore",
+    "alias": "souqalwisat"
+  },
+  "appVersionCode": 1,
+  "appVersionName": "1.0.0",
+  "shortcuts": [],
+  "generatorApp": "bubblewrap-cli",
+  "webManifestUrl": "https://souqalwisat.com/app/manifest.json",
+  "fallbackType": "customtabs",
+  "features": {},
+  "alphaDependencies": {
+    "enabled": false
+  },
+  "enableSiteSettingsShortcut": true,
+  "isChromeOSOnly": false,
+  "isMetaQuest": false,
+  "minSdkVersion": 21,
+  "orientation": "portrait",
+  "fingerprints": [],
+  "additionalTrustedOrigins": [],
+  "retainedBundles": []
+}

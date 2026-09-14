@@ -1,0 +1,12 @@
+{
+  "name": "souq-alwisat-pwa",
+  "version": "1.0.0",
+  "description": "سوق الوساط - تطبيق أندرويد PWA/TWA",
+  "private": true,
+  "scripts": {
+    "build:android": "bubblewrap update --manifest=./twa-manifest.json && bubblewrap build --skipPwaValidation --manifest=./twa-manifest.json"
+  },
+  "keywords": ["pwa", "twa", "bubblewrap", "souq-alwisat"],
+  "author": "Souq Al Wisat",
+  "license": "UNLICENSED"
+}
